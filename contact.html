@@ -1,0 +1,77 @@
+   <!DOCTYPE html>
+   <html>
+    <body class="contact">
+<link rel="stylesheet" href="styles.css">
+      <header>
+        <h1 class="header2">Contact  <p class="openbtn" onclick="openNav()"><span>&#9776;</span></p> </h1>
+     
+    
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Clock</a>
+        <a href="timer.html">Timer</a>
+        <a href="stopwatch.html">Stopwatch</a>
+        <a href="countdown.html">Countdown</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      </header>
+           <br>
+    <div class="form">
+
+    <div class="flex items-center min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div class="container mx-auto">
+        <div class="max-w-md mx-auto my-10 bg-white p-5 rounded-md shadow-sm">
+          <div class="text-center">
+            <h1 class="my-3 text-3xl font-semibold text-gray-700 dark:text-gray-200">
+            </h1>
+            <p class="text-gray-400 dark:text-gray-400">
+            </p>
+          </div>
+          <div class="m-1">
+            <h2>Something wrong? <wbr> Let me know!
+            </h2>
+            <p class="p-">* is required</p>
+            <form action="https://api.web3forms.com/submit" method="POST" id="form">
+              <input type="hidden" name="access_key" value="c06fb134-949e-4ac2-a810-90c0128089f2" />
+              <input type="hidden" name="from_name" value="WordClock">
+              <input type="hidden" name="subject" value="U heeft 1 nieuw bericht!" />
+              <input type="checkbox" name="botcheck" id="" style="display: none;" />
+    
+              <div class="mb-2">
+                <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400" style="font-family: Poppins;">Full Name <span style="color: red;">*</span></span></label><br>
+                <input type="text" name="name" id="name" placeholder="Your name..." required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400" style="font-family: Poppins;">Email Address <span style="color: red;">*</span></label><br>
+                <input type="email" name="email" id="email" placeholder="Email address" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+              </div>
+              <div class="mb-4" required>
+                <label for="page" class="block mb-2 text-sm text-gray-600 dark:text-gray-400" style="font-family: Poppins;">Wich page? <span style="color: red;">*</span></label><br>
+                <input type="text" name="page" id="message" placeholder="Wich page?" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+              </div>
+              <div class="mb-6">  
+                <label for="subject" class="block mb-2 text-sm text-gray-600 dark:text-gray-400" style="font-family: Poppins;">Your message <span style="color: red;">*</span></label><br>
+                <textarea  name="message" id="message" placeholder="Your message..." required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" ></textarea>
+              </div>
+
+              <div class="mb-7">
+               <button type="submit">Send</button>
+              </div>
+
+              <p class="text-base text-center text-gray-400" id="result"></p>
+             
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div><br>
+
+<script src="script.js"></script>
+    </body>
+   </html>
+   

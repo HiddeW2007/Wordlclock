@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time Tools</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+</head>
+<body>
+
+  <header>
+    <h1 class="header2">Clock  <p class="openbtn" onclick="openNav()"><span>&#9776;</span></p> </h1>
+ 
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Clock</a>
+    <a href="timer.html">Timer</a>
+    <a href="stopwatch.html">Stopwatch</a>
+    <a href="countdown.html">Countdown</a>
+    <a href="contact.html">Contact</a>
+  </div>
+ 
+  </header>
+
+
+
+    <div class="clock">
+    </select>
+    <div id="clock-container">
+        <div id="clock"></div>
+    </div>
+
+        <label for="timezone">Choose Timezone:</label><br>
+        <select class="style" id="timezone" onkeyup="filterFunction(this,event)" onchange="changeTimezone()">
+          <optgroup label="Europe" id="europe-optgroup">
+            <option value="local" selected>Local</option>
+            <option value="Europe/Amsterdam">The Netherlands - Amsterdam</option>
+            <option value="Europe/Berlin">Deutschland - Berlin</option>
+            <option value="Europe/Istanbul">Turkey - Istanbul</option>
+            <option value="GMT">UK - London</option>
+            <option value="Europe/Moscow">Russia - Moscow</option>
+            <option value="Europe/Paris">France - Paris</option>
+            <option value="Europe/Rome">Italy - Rome</option>
+          </optgroup>
+          <optgroup label="North America" id="usa-optgroup">
+            <option value="America/Denver">Utah - Salt Lake City</option>
+            <option value="America/Chicago">Texas - Austin</option>
+            <option value="America/New_York">New York - New York</option>
+            <option value="America/Halifax">Nova Scotia - Halifax</option>
+            <option value="America/St_Johns">Newfoundland and Labrador - Saint John's</option>
+            <option value="America/Anchorage">Alaska - Juneau</option>
+            <option value="America/Godthab">Greenland - Nuuk</option>
+          </optgroup>
+          <optgroup label="Africa">
+            <option value="Africa/Accra">Ghana - Accra</option>
+            <option value="Indian/Antananarivo">Madagascar - Antananarivo</option>
+            <option value="Africa/Johannesburg">South Africa - Cape Town</option>
+            <option value="Africa/Niamey">Niger - Abuja</option>            
+          </optgroup>
+          <optgroup label="Asia">
+            <option value="Australia/Sydney">Australia - Canberra</option>
+            <option value="Asia/Dhaka">Bangladesh - Dhaka</option>
+            <option value="Asia/Shanghai">China - Beijing</option>
+            <option value="Asia/Dubai">United Arab Emirates - Abu Dhabi</option>
+            <option value="Asia/Kolkata">India - New Delhi</option>
+            <option value="Asia/Tokyo">Japan - Tokyo</option>
+            <option value="Asia/Seoul">South Korea - Seoul</option>
+            <option value="Asia/Karachi">Pakistan - Islamabad</option>
+            <option value="Europe/Moscow">Russia - Moscow</option>
+            <option value="Asia/Riyadh">Saudi Arabia - Riyadh</option>                   
+          </optgroup>
+          <optgroup label="South-America">
+            <option value="America/Argentina/Buenos_Aires">Argentina - Buenos Aires</option>
+            <option value="America/Bogota">Colombia - Bogota</option>
+            <option value="America/Halifax">Brazil - Brasilia</option>
+          </optgroup>
+          <optgroup label="Australia">
+            <option value="Pacific/Guadalcanal">Australia - Guadalcanal</option>
+            <option value="Australia/Sydney">Australia - Canberra</option>
+            <option value="Australia/Adelaide">Australia - Adelaide</option>
+            <option value="Australia/Perth">Australia - Perth</option>
+            <option value="Indian/Christmas">Australia - Christmas Island</option>
+          </optgroup>
+        </select>
+    </div>
+
+    
+
+
+
+        <script src="script.js"></script>
+</body>
+</html>
+

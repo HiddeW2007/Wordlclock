@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1 class="header2">Countdown  <p class="openbtn" onclick="openNav()"><span>&#9776;</span></p> </h1>
+ 
+
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="index.html">Clock</a>
+    <a href="timer.html">Timer</a>
+    <a href="stopwatch.html">Stopwatch</a>
+    <a href="countdown.html">Countdown</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  </header>
+  <div class="timer-container">
+
+    <div class="input-container">
+
+      <div class="input-row1">
+        <h2>Hours:</h2>
+        <button class="plus" onclick="changeValue('hours', 'up')">+</button>
+        <div class="input-group">
+          <input type="number" id="hours" min="0" max="9999" placeholder="0">
+        </div>
+        <button class="minus" onclick="changeValue('hours', 'down')">-</button>
+      </div>
+
+
+      <div class="input-row2">
+        <h2>Minutes:</h2>
+        <button class="plus" onclick="changeValue('minutes', 'up')">+</button>
+        <div class="input-group">
+          <input type="number" id="minutes" min="0" placeholder="0" max="9999" >
+          </div>
+          <button class="minus"onclick="changeValue('minutes', 'down')">-</button>
+        </div>
+
+
+      <div class="input-row3">
+        <h2>Seconds:</h2>
+        <button class="plus"onclick="changeValue('seconds', 'up')">+</button>
+        <div class="input-group">
+          <input type="number" id="seconds" min="0" placeholder="0" max="9999" >
+        </div>
+      <button class="minus" onclick="changeValue('seconds', 'down')">-</button>
+    </div>
+
+      <div class="input-row4">
+        <h2>Milliseconds:</h2>
+        <button class="plus"onclick="changeValue('milliseconds', 'up')">+</button>
+        <div class="input-group">
+          <input type="number" id="milliseconds" placeholder="0" min="0" max="9999" >
+        </div>
+        <button class="minus"onclick="changeValue('milliseconds', 'down')">-</button>
+      </div>
+    </div>
+
+  </div>
+  <button class="start" onclick="startTimer()">Start</button>
+  <button class="reset" onclick="resetTimer()">Reset</button>
+  <div style="display: none;" id="timer-display"></div>
+  <script src="script.js"></script>
+</body>
+</html>
+
