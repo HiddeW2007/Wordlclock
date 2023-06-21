@@ -20,15 +20,17 @@ label{
 }
 
 header{
-    padding: 1px;
+    padding: 0.1px;
     background: #1abc9c;
     color: white;
     font-size: 2rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.header2{
-    text-align: center;
-}
+
 
 body{
     margin: 0;
@@ -119,6 +121,11 @@ select.style{
     transition: 1s;
   }
 
+  span.collon{
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+  }
 
   /*form*/
   .form{
@@ -242,12 +249,12 @@ select.style{
     font-size: 1.1rem;
   }
 
-  ::placeholder{
+  input::placeholder[type=number]{
     font-size: 1.3rem;
   }
 
   
-button:active {
+button:active[type=submit] {
 
     box-shadow: 0 5px #666;
     transform: translateY(4px);
@@ -316,7 +323,7 @@ button.plus, button.minus{
   margin-bottom: 10% ;
 }
 
-::placeholder{
+input::placeholder[type=number]{
   font-size: 2.5rem;
 }
 
@@ -337,8 +344,47 @@ button.plus:hover, button.minus:hover{
 }
 
 button.start, button.reset{
-  background-color: rgb(216, 231, 236);
+  background-color: rgba(214, 93, 63, 0.568);
+  text-align: center;
+  width: 8rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+  box-shadow: #666 6px 6px 0px;
+  transition: 0.3s;
+  border: none;
+  
+}
 
+button.reset{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button.start{
+  margin-right: auto;
+}
+
+.buttongroup{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button.start:hover, button.reset:hover{
+  background-color: rgba(214, 93, 63, 0.473);
+  border: none;
+}
+
+button.start:active, button.reset:active{
+  box-shadow: #666 4px 4px 0px;
+  transform: translateY(4px);
+  border: none;
+}
+
+body{
+  transition: 0.3s
 }
 
 

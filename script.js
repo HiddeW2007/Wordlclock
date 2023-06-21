@@ -193,6 +193,14 @@ function changeValue(inputId, action) {
   input.value = value;
 }
 
+function resetTimer() {
+  clearInterval(countdownTimer); // Stop the timer
+  timerDisplay.textContent = "00:00:00:00"; // Reset the timer display
+  resetInputFields(); // Reset the input fields and placeholders
+  elapsedTime = 0; // Reset the elapsed time
+}
+
+
 
 function startTimer() {
   var hoursInput = document.getElementById("hours");
@@ -210,6 +218,7 @@ function startTimer() {
     alert("Negatieve waarden zijn niet toegestaan.");
     return;
   }
+  
 
   if (minutes >= 60 || seconds >= 60 || milliseconds >= 1000) {
     alert("Ongeldige waarde voor minuten, seconden of milliseconden.");
@@ -222,25 +231,6 @@ function startTimer() {
   clearInterval(countdownTimer);
   timerDisplay = document.getElementById("timer-display");
   countdownTimer = setInterval(updateTimer, 10);
-}
-
-
-function showNotification() {
-  if (Notification.permission === "granted") {
-    var notification = new Notification("Timer is afgelopen!", {
-      body: "De timer die je hebt ingesteld is nu afgelopen.",
-      icon: "notification_icon.png" // Voeg hier het pad naar je gewenste pictogram toe
-    });
-  } else if (Notification.permission !== "denied") {
-    Notification.requestPermission().then(function(permission) {
-      if (permission === "granted") {
-        var notification = new Notification("Timer is afgelopen!", {
-          body: "De timer die je hebt ingesteld is nu afgelopen.",
-          icon: "notification_icon.png" // Voeg hier het pad naar je gewenste pictogram toe
-        });
-      }
-    });
-  }
 }
 
 
@@ -262,6 +252,15 @@ function updateTimer() {
 
     // Werk de invoervelden bij
     updateInputFields(remainingTime);
+  }
+  var remainingTime = timerDuration - elapsedTime;
+  if (remainingTime <= 0) {
+    clearInterval(countdownTimer);
+    timerDisplay.textContent = "Timer ended!";
+    playAlertSound();
+    alert("Timer ended!"); // Alert toegevoegd
+  } else {
+    timerDisplay.textContent = formatTime(remainingTime);
   }
 }
 

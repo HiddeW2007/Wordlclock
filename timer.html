@@ -30,7 +30,7 @@
         </div>
         <button class="minus" onclick="changeValue('hours', 'down')">-</button>
       </div>
-
+      <span class="collon">:</span>
 
       <div class="input-row2">
         <h2>Minutes:</h2>
@@ -40,7 +40,7 @@
           </div>
           <button class="minus"onclick="changeValue('minutes', 'down')">-</button>
         </div>
-
+        <span class="collon">:</span class="collon">
 
       <div class="input-row3">
         <h2>Seconds:</h2>
@@ -50,6 +50,7 @@
         </div>
       <button class="minus" onclick="changeValue('seconds', 'down')">-</button>
     </div>
+<span class="collon">:</span class="collon">
 
       <div class="input-row4">
         <h2>Milliseconds:</h2>
@@ -62,8 +63,11 @@
     </div>
 
   </div>
+  <div class="buttongroup">
+    <button class="reset" id="reset-btn" onclick="resetTimer()">Reset</button>
   <button class="start" onclick="startTimer()">Start</button>
-  <button class="reset" onclick="resetTimer()">Reset</button>
+ 
+</div>
   <div style="display: none;" id="timer-display"></div>
   <script src="script.js"></script>
 </body>
