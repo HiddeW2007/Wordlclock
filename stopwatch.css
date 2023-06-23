@@ -1,0 +1,133 @@
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background: rgb(8,8,182);
+    background: radial-gradient(circle, rgba(8,8,182,1), rgba(0,255,191,1));
+    overflow-x: hidden;
+    transition: 0.5s;
+    color: rgba(255, 255, 255, 0.479);
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  .openbtn {
+    font-size: 25px;
+    cursor: pointer;
+    background-color:#eedcd900 ;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 16px;
+    top: 1rem;
+    right: 1rem;
+    position: absolute;
+  }
+ 
+  .openbtn:hover span {
+    background-color: #e4bda1;
+    border-radius: 16px;
+    display: none;
+  }
+
+  .openbtn:hover:before{
+    content: " Menu ☰ ";
+    transition: 1s;
+  }
+
+  span.collon{
+    font-size: 5rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  body{
+    margin: 0;
+  }
+
+  header{
+    padding: 0.1px;
+    background: #1abc9c;
+    color: white;
+    font-size: 2rem;
+    height: 7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/**/
+.container {
+ text-align: center;
+ margin-top: 8%;
+  }
+.timer {
+  font-family: "Pathway Extreme", monospace;
+  font-size: 48px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+}
+
+button.start:hover, button.stop:hover, button.reset:hover{
+  background-color: rgba(214, 93, 63, 0.473);
+  border: none;
+ 
+}
+      
+button.start:active, button.stop:active, button.reset:active{
+  box-shadow: #666 4px 4px 0px;
+  transform: translateY(4px);
+  border: none;
+}
+button.start, button.stop, button.reset{
+  background-color: rgba(214, 93, 63, 0.568);
+  text-align: center;
+  width: 8rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  border-radius: 16px;
+  margin-top: 2rem;
+  box-shadow: #666 6px 6px 0px;
+  transition: 0.3s;
+  border: none;
+  font-family: "Pathway Extreme";
+}
+  
+.btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button{
+  margin: 2rem;
+}
+

@@ -1,14 +1,65 @@
-<header>
-    <h1 class="header2">Clock  <span class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </h1>
- 
+<!DOCTYPE html>
+<html>
+  <body>
+    <link rel="stylesheet" href="styles.css">
 
-  <div id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="index.html">Clock</a>
-    <a href="timer.html">Timer</a>
-    <a href="stopwatch.html">Stopwatch</a>
-    <a href="countdown.html">Countdown</a>
-    <a href="contact.html">Contact</a>
-  </div>
- 
-  </header>
+    <header>
+      <h1 class="header2">Custom Countdown  <p class="openbtn" onclick="openNav()"><span>&#9776;</span></p> </h1>
+   
+  
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="index.html">Clock</a>
+      <a href="timer.html">Timer</a>
+      <a href="stopwatch.html">Stopwatch</a>
+      <a href="countdown.html">Countdown</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    </header>
+
+    <div class="container">
+      <div style="display: none;" class="timer">00:00:00:00</div>
+      <ul class="units">
+        <li>
+          <span style="font-size: 4rem;" id="days">00</span>
+          Days
+        </li>
+        
+        <li>
+          <span style="font-size: 4rem;" id="hours">00</span>
+          Hours
+        </li>
+        
+        <li>
+          <span style="font-size: 4rem;"  id="minutes">00</span>
+          Minutes
+        </li>
+        <li>
+          <span style="font-size: 4rem;" id="seconds">00</span>
+          Seconds
+        </li>
+      </ul>
+  
+      <div class="input-group">
+        <input type="datetime-local" id="dateInput">
+        <div class="startbtns">
+        <button class="coustart">Start</button>    
+        <button class="coureset">Reset</button>
+      </div>
+      </div>
+    </div>
+    <p style="margin: 4rem 0rem 3rem 0rem;  font-size: 1.5rem; color: black;">Choose an audio file that will play when the countdown is over.</p>
+    <label for="audioInput" class="file-label">
+      
+      <span class="file-button">Select File...</span>
+      <input type="file" id="audioInput" accept="audio/mpeg" onchange="handleFileSelect(event)"> 
+      
+    </label>
+    <div class="selectedfile" id="selectedFile">
+      <span id="selectedFileText">No file selected</span>
+    </div>
+
+    </div>
+    <script src="countdown.js"></script>
+  </body>
+</html>
