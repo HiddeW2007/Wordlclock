@@ -215,13 +215,13 @@ function startTimer() {
 
   // Valideer de ingevoerde waarden
   if (hours < 0 || minutes < 0 || seconds < 0 || milliseconds < 0) {
-    alert("Negatieve waarden zijn niet toegestaan.");
+    alert("Negative values ​​are not allowed.");
     return;
   }
   
 
   if (minutes >= 60 || seconds >= 60 || milliseconds >= 1000) {
-    alert("Ongeldige waarde voor minuten, seconden of milliseconden.");
+    alert("Invalid value for minutes, seconds, or milliseconds.");
     return;
   }
 
@@ -242,7 +242,7 @@ function updateTimer() {
   var remainingTime = timerDuration - elapsedTime;
   if (remainingTime <= 0) {
     clearInterval(countdownTimer);
-    timerDisplay.textContent = "Timer is afgelopen!";
+    timerDisplay.textContent = "Timer Ended!"
     playAlertSound();
 
     // Reset de invoervelden en toon de placeholders
@@ -266,7 +266,7 @@ function updateTimer() {
 
 if (remainingTime <= 0) {
   clearInterval(countdownTimer);
-  timerDisplay.textContent = "Timer is afgelopen!";
+  timerDisplay.textContent = "Timer Ended!";
   playAlertSound();
   showNotification();
 }
@@ -334,7 +334,7 @@ function padZero(value) {
 }
 
 function playAlertSound() {
-  var audio = new Audio("alert_sound.mp3"); // Voeg hier het pad naar je gewenste geluidsbestand toe
+  var audio = new Audio("alert.mp3"); // Voeg hier het pad naar je gewenste geluidsbestand toe
   audio.play();
 }
 
